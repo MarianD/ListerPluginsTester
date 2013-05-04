@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1367681389 source:c:\users\marian\documents\codeblocks\listerpluginstester\main.cpp
+	<windows.h>
+	<commctrl.h>
+	"WindowProc.h"
+	"NaplnStrukturuWndClassEx.h"
+	"Constants.h"
+
+1367680711 c:\users\marian\documents\codeblocks\listerpluginstester\windowproc.h
+
+1367681358 c:\users\marian\documents\codeblocks\listerpluginstester\naplnstrukturuwndclassex.h
+
+1367690162 c:\users\marian\documents\codeblocks\listerpluginstester\constants.h
+
+1367684139 source:c:\users\marian\documents\codeblocks\listerpluginstester\naplnstrukturuwndclassex.cpp
+	<windows.h>
+	"NaplnStrukturuWndClassEx.h"
+	"WindowProc.h"
+	"Constants.h"
+
+1367686548 source:c:\users\marian\documents\codeblocks\listerpluginstester\windowproc.cpp
+	<windows.h>
+	"WindowProc.h"
+	"Constants.h"
+
