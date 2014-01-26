@@ -8,6 +8,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lPara
 {
     static HWND      pluginWindow = 0; // We will fill it forever in the processing of the WM_CREATE message
     static HINSTANCE hDLL         = LoadLibrary(menoDLL);
+    static bool      prvySubor    = false;
     int    sirka;
     int    dlzka;
 
@@ -44,8 +45,13 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lPara
             dlzka = HIWORD(lParam);
             MoveWindow(pluginWindow, 0, 0, sirka, dlzka, TRUE);    // Toto potom pošle oknu pluginWindow správu WM_SIZE
             return 0;
+        case WM_LBUTTONDBLCLK:
+            if (ListLoadNextFunc)
+                ListLoadNextFunc(hwnd, pluginWindow, prvySubor ? (char *) menoSuboru1 : (char *) menoSuboru2, 0);
+            prvySubor = !prvySubor;
+            return 0;
         case WM_CREATE:
-            pluginWindow = ListLoadFunc(hwnd, (char *) menoSuboru, 0);
+            pluginWindow = ListLoadFunc(hwnd, (char *) menoSuboru1, 0);
             return 0;
         case WM_DESTROY:
             if (ListCloseWindowFunc)

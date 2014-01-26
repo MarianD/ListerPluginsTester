@@ -1,8 +1,15 @@
 #ifndef CONSTANTS_H_INCLUDED
     #define CONSTANTS_H_INCLUDED
 
-    const char * const szClassName = "ListerPluginsTester";     // "ListerPluginsTester 64-bit" for 64-bit version
-    const char * const menoDLL     = "CharsOccurrences.wlx";    // "CharsOccurrences.wlx64" for 64-bit version
-    const char * const menoSuboru  = "C:\\LoremIpsum.txt";
+    #ifdef PRE_32_BIT
+        const char * const szClassName = "ListerPluginsTester";
+        const char * const menoDLL     = "CharsOccurrences.wlx";
+    #else
+        const char * const szClassName = "ListerPluginsTester 64-bit";
+        const char * const menoDLL     = "CharsOccurrences.wlx64";
+    #endif
+
+    const char * const menoSuboru1     = "C:\\LoremIpsum1.txt";
+    const char * const menoSuboru2     = "C:\\LoremIpsum2.txt";
 
 #endif // CONSTANTS_H_INCLUDED

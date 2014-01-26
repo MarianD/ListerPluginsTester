@@ -13,8 +13,13 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add option="-m32" />
 					<Add option="-D_DEBUG" />
+					<Add option="-DPRE_32_BIT" />
 				</Compiler>
+				<Linker>
+					<Add option="-m32" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/ListerPluginsTester" prefix_auto="1" extension_auto="1" />
@@ -23,10 +28,13 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add option="-m32" />
 					<Add option="-DNODEBUG" />
+					<Add option="-DPRE_32_BIT" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+					<Add option="-m32" />
 				</Linker>
 			</Target>
 			<Target title="Release 64">
