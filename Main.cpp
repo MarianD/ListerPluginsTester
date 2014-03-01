@@ -13,6 +13,16 @@ int WINAPI WinMain (HINSTANCE  hThisInstance, HINSTANCE hPrevInstance, LPSTR lps
 
     NaplnStrukturuWndClassEx(&wndClassEx, hThisInstance, szClassName);
 
+
+    INITCOMMONCONTROLSEX icc;
+
+    // Initialize common controls (for enabling Visual Styles in Windows XP to 7)
+    icc.dwSize = sizeof(icc);
+    icc.dwICC = ICC_WIN95_CLASSES;
+    InitCommonControlsEx(&icc);
+
+    // Note: Visual Styles have to be enabled also in Manifest XML file (or resource)
+
     /* Register the window class, and if it fails quit the program */
     if (!RegisterClassEx(&wndClassEx))
         return EXIT_FAILURE;

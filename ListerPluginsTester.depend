@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1367677789 source:c:\users\marian\documents\codeblocks\listerpluginstester\main.cpp
+1393615752 source:c:\users\marian\documents\codeblocks\listerpluginstester\main.cpp
 	<windows.h>
 	<commctrl.h>
 	"WindowProc.h"
@@ -18,7 +18,7 @@
 	"WindowProc.h"
 	"Constants.h"
 
-1390714484 source:c:\users\marian\documents\codeblocks\listerpluginstester\windowproc.cpp
+1390715882 source:c:\users\marian\documents\codeblocks\listerpluginstester\windowproc.cpp
 	<windows.h>
 	"WindowProc.h"
 	"Constants.h"

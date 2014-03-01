@@ -38,7 +38,7 @@
 				</Linker>
 			</Target>
 			<Target title="Release 64">
-				<Option output="bin/Release 64/ListerPluginsTeste64" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release 64/ListerPluginsTester64" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release 64/" />
 				<Option type="0" />
 				<Option compiler="gnu_gcc_compiler_for_64_bit" />
